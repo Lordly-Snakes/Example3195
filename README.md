@@ -25,5 +25,8 @@
  "Настройки")  
      ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/gifsetting.gif
  "Настройки") 
- ***
- 
+***
+ ### Авторы
+Прокофьев Антон и группа 319/7 ИСПО СПбПУ Петра Великого<br>
+2024 год
+
