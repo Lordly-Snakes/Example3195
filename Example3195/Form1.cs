@@ -9,6 +9,7 @@ namespace Example3195
 {
     public partial class Form1 : Form
     {
+        // Внутренние физ параметры вращения
         private double V0;
         private double A = 0;
         private double time = 0;
@@ -24,25 +25,47 @@ namespace Example3195
         private int score;
         private bool isRotate;
 
+        // Константы
         const string STRING_PRIZ = "приз";
         const string STRING_NONE = "None";
         const string STRING_ROTATE = "Крутить";
         const string STRING_SELECT = "Выбрать букву";
 
+
+        /// <summary>
+        /// Нижни порог генерации скорости
+        /// </summary>
         public int R1 { get; set; }
+
+        /// <summary>
+        /// Вверхний порог генерации скорости
+        /// </summary>
         public int R2 { get; set; }
+
+        /// <summary>
+        /// Время за которое должен выполниться алгоритм
+        /// </summary>
         public int Time { get; set; }
+
+
         private Random Random;
 
         public Form1()
         {
             InitializeComponent();
             isRotate = false;
+            
             score = 0;
-            R1 = 372;
-            R2 = 498;
-            Time = 5;
+
+            
+            R1 = 900;
+            R2 = 1000;
+            Time = 3;
+
+            // Рандомизируем рандом с помощью кол-ва секунд сначала времени unix
             Random = new Random((int)ConvertToUnixTimestamp(DateTime.Now));
+
+            // Задаем сектора барабана
             selBaraban = new List<string>()
             {
                 "x5", // Элемент на котором стоит стрелка должен быть первым
@@ -65,13 +88,16 @@ namespace Example3195
             sel = selBaraban[0];
             bitmap = Properties.Resources.baraban_finel;
             imageBox.Image = bitmap;
-            // TO DO сделать угадывание всего слова и есть ли буква в слове если да открывать все ее вхождения
+            
+            // Список слов // Сделать потом загрузку из файла
             string[] words = new string[]{
                 "монстры",
                 "франкенштейн",
                 "конфеты",
                 "тыква"
             };
+
+
             charArray = words[Random.Next(0, words.Length)].ToCharArray();
             dataGridView1.ColumnCount = charArray.Length;
             dataGridView1.RowCount = 1;
@@ -81,7 +107,12 @@ namespace Example3195
         }
 
 
-
+        /// <summary>
+        /// Функция расчета необходиомго ускорения вращения колеса в зависимости от нач скорости и времени
+        /// </summary>
+        /// <param name="v0">Начальная скорость</param>
+        /// <param name="constTime">Время в которое колесо должно вращаться</param>
+        /// <returns></returns>
         private double RaschetStart(double v0, double constTime)
         {
 
@@ -124,7 +155,10 @@ namespace Example3195
 
 
 
-
+        /// <summary>
+        /// Функция определяющая выбранный сектор зная сколько секторов на круге
+        /// </summary>
+        /// <returns>Возвращает выбранный сектор</returns>
         private string selectedSector()
         {
             int c = 0;
@@ -261,6 +295,10 @@ namespace Example3195
 
         }
 
+
+        /// <summary>
+        /// Функция запуска расчетов
+        /// </summary>
         private void Start()
         {
             time = 0;
@@ -269,6 +307,10 @@ namespace Example3195
             double maxAngle = RaschetAngle(V0, 5 / 1000d, A);
         }
 
+        /// <summary>
+        /// Функция для работы с результатами выбора буквы и сектором барабана
+        /// </summary>
+        /// <param name="resBaraban">Выбранный сектор барабана</param>
         private void Result(string resBaraban)
         {
             if (int.TryParse(resBaraban, out int sc))
@@ -286,6 +328,14 @@ namespace Example3195
             label2.Text = score.ToString();
         }
 
+
+
+
+
+
+
+
+
         public void Rotate(double angle)
         {
             System.Drawing.Image image = RotateImage(imageBox.Image, angle);
@@ -295,10 +345,6 @@ namespace Example3195
             imageBox.SizeMode = PictureBoxSizeMode.Zoom;
             imageBox.Invalidate();
         }
-
-
-
-
 
         public System.Drawing.Image RotateImage(System.Drawing.Image img, double angle)
         {
@@ -377,7 +423,7 @@ namespace Example3195
 
 
 
-                //
+                // Авто режим
                 if (checkBox1.Checked)
                 {
                     actionButton.PerformClick();
