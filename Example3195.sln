@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example3195", "Example3195\Example3195.csproj", "{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Debug|x86.ActiveCfg = Debug|x86
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Debug|x86.Build.0 = Debug|x86
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Release|x86.ActiveCfg = Release|x86
+		{BFCBBDB0-883E-4A85-A5B0-CF3ADD2966AA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81F1A313-70C8-411E-B8F0-145440F5DA57}
+	EndGlobalSection
+EndGlobal
