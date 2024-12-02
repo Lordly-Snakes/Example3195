@@ -6,18 +6,24 @@
 ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/MainForm.png
  "Главная форма") 
 
+
+
  
  ## Момент вращения
  ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/Rotate.png
  "Вращение барабана")  
+  ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/gifrotate.gif
+ "Главная форма") 
   
   ## Окно выбора буквы
  ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/SelectKey.png
  "Выбор буквы") 
-  
+    ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/gifselect.gif
+ "Выбор буквы") 
   ## Настрока порогов рандомизации скорости
   ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/SelectStartEndSpeed.png
  "Настройки")  
- 
+     ![Изображение](https://raw.githubusercontent.com/Lordly-Snakes/Field-of-miracles/refs/heads/master/Screenshots/gifsetting.gif
+ "Настройки") 
  ***
  
